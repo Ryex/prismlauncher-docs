@@ -1,0 +1,3960 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../AssetsUtils/">
+      
+      
+        <link rel="next" href="../DesktopServices/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>DataPackUtils - Untitled</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/doxide.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#datapackutils" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Untitled" class="md-header__button md-logo" aria-label="Untitled" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Untitled
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DataPackUtils
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Untitled" class="md-nav__button md-logo" aria-label="Untitled" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Untitled
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prism Launcher
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AccountData/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AccountData
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AccountList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AccountList
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AccountListPage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AccountListPage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AccountProfile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AccountProfile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AccountTaskState/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AccountTaskState
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Application/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AtlPage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AtlPage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BaseInstance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BaseInstance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BaseVersion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BaseVersion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BaseVersionList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BaseVersionList
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Component/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Component
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ComponentUpdateTask/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ComponentUpdateTask
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ConcurrentTask/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ConcurrentTask
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CustomTheme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CustomTheme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DataPack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DataPack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ExternalUpdater/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ExternalUpdater
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FlamePage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FlamePage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GenericManagedPackPage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GenericManagedPackPage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HintOverrideProxyStyle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HintOverrideProxyStyle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../INISettingsObject/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    INISettingsObject
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IconLabel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IconLabel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstanceCopyTask/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    InstanceCopyTask
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstanceCreationTask/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    InstanceCreationTask
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstanceImportTask/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    InstanceImportTask
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstanceList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    InstanceList
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstanceView/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    InstanceView
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LaunchProfile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LaunchProfile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LaunchTask/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LaunchTask
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LauncherPage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LauncherPage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LineSeparator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LineSeparator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LocalResourceUpdateTask/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LocalResourceUpdateTask
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LoggedProcess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LoggedProcess
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MacSparkleUpdater/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MacSparkleUpdater
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MainWindow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MainWindow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ManagedPackPage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ManagedPackPage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../McClient/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    McClient
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MinecraftAccount/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MinecraftAccount
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MinecraftInstance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MinecraftInstance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mod
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ModDetails/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ModDetails
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ModFolderModel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ModFolderModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ModrinthPage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ModrinthPage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MojangDownloadInfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MojangDownloadInfo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NewsChecker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NewsChecker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NewsEntry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NewsEntry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OverrideSetting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OverrideSetting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PackProfile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PackProfile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PageContainer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PageContainer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PassthroughSetting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PassthroughSetting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PixmapCache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PixmapCache
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PrismExternalUpdater/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PrismExternalUpdater
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProfileSelectDialog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ProfileSelectDialog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProgressWidget/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ProgressWidget
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProjectItemDelegate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ProjectItemDelegate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Resource/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resource
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ResourceAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ResourceAPI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ResourceFolderLoadTask/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ResourceFolderLoadTask
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ResourceFolderModel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ResourceFolderModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ResourcePack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ResourcePack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ResourceType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ResourceType
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SeparatorPrefixTree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SeparatorPrefixTree
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SequentialTask/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SequentialTask
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Setting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SettingsObject/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SettingsObject
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ShaderPack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ShaderPack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Task/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Task
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TechnicPage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TechnicPage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TexturePack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TexturePack
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ThemeManager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ThemeManager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UpdateActionChangeVersion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UpdateActionChangeVersion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UpdateActionLatestRecommendedCompatible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UpdateActionLatestRecommendedCompatible
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UpdateActionRemove/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UpdateActionRemove
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Usable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Usable
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UseLock/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UseLock
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VariableSizedImageObject/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VariableSizedImageObject
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VersionFile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VersionFile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VersionPage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VersionPage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VersionSelectWidget/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VersionSelectWidget
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VisualGroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VisualGroup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WideBar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WideBar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../World/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    World
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WorldList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WorldList
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WorldSave/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WorldSave
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared_qobject_ptr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    shared_qobject_ptr
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_88" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../ATLauncher/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    ATLauncher
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_88" id="__nav_88_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_88_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_88">
+            <span class="md-nav__icon md-icon"></span>
+            ATLauncher
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ATLauncher/PackInstallTask/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PackInstallTask
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_89" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../AssetsUtils/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    AssetsUtils
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_89_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_89">
+            <span class="md-nav__icon md-icon"></span>
+            AssetsUtils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_90" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    DataPackUtils
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_90_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_90">
+            <span class="md-nav__icon md-icon"></span>
+            DataPackUtils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_91" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../DesktopServices/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    DesktopServices
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_91_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_91">
+            <span class="md-nav__icon md-icon"></span>
+            DesktopServices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_92" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../FS/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    FS
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_92" id="__nav_92_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_92_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_92">
+            <span class="md-nav__icon md-icon"></span>
+            FS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FS/clone/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    clone
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FS/copy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    copy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FS/create_link/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    create_link
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_93" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../FTBImportAPP/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    FTBImportAPP
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_93" id="__nav_93_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_93_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_93">
+            <span class="md-nav__icon md-icon"></span>
+            FTBImportAPP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FTBImportAPP/ImportFTBPage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ImportFTBPage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_94" >
+        
+          
+          <label class="md-nav__link" for="__nav_94" id="__nav_94_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    InstanceList
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_94_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_94">
+            <span class="md-nav__icon md-icon"></span>
+            InstanceList
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstanceList/AdditionalRoles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AdditionalRoles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstanceList/InstListError/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    InstListError
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_95" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../JavaCommon/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    JavaCommon
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_95_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_95">
+            <span class="md-nav__icon md-icon"></span>
+            JavaCommon
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_96" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../Json/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Json
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_96_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_96">
+            <span class="md-nav__icon md-icon"></span>
+            Json
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_97" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../LegacyFTB/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    LegacyFTB
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_97" id="__nav_97_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_97_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_97">
+            <span class="md-nav__icon md-icon"></span>
+            LegacyFTB
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LegacyFTB/PackInstallTask/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PackInstallTask
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LegacyFTB/Page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_98" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../MMCZip/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    MMCZip
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_98_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_98">
+            <span class="md-nav__icon md-icon"></span>
+            MMCZip
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_99" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../MessageLevel/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    MessageLevel
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_99" id="__nav_99_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_99_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_99">
+            <span class="md-nav__icon md-icon"></span>
+            MessageLevel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MessageLevel/Enum/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_100" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../ModUtils/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    ModUtils
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_100_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_100">
+            <span class="md-nav__icon md-icon"></span>
+            ModUtils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_101" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../Net/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Net
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_101" id="__nav_101_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_101_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_101">
+            <span class="md-nav__icon md-icon"></span>
+            Net
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Net/NetRequest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NetRequest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_102" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../Override/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Override
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_102_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_102">
+            <span class="md-nav__icon md-icon"></span>
+            Override
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_103" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../ProfileUtils/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    ProfileUtils
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_103_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_103">
+            <span class="md-nav__icon md-icon"></span>
+            ProfileUtils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_104" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../ResourceDownload/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    ResourceDownload
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_104" id="__nav_104_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_104_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_104">
+            <span class="md-nav__icon md-icon"></span>
+            ResourceDownload
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ResourceDownload/ResourceModel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ResourceModel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ResourceDownload/ResourcePage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ResourcePage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_105" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../ResourcePackUtils/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    ResourcePackUtils
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_105_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_105">
+            <span class="md-nav__icon md-icon"></span>
+            ResourcePackUtils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_106" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../ShaderPackUtils/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    ShaderPackUtils
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_106_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_106">
+            <span class="md-nav__icon md-icon"></span>
+            ShaderPackUtils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_107" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../StringUtils/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    StringUtils
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_107_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_107">
+            <span class="md-nav__icon md-icon"></span>
+            StringUtils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_108" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../Technic/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Technic
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_108" id="__nav_108_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_108_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_108">
+            <span class="md-nav__icon md-icon"></span>
+            Technic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Technic/SolderPackInstallTask/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SolderPackInstallTask
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_109" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../TexturePackUtils/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    TexturePackUtils
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_109_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_109">
+            <span class="md-nav__icon md-icon"></span>
+            TexturePackUtils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_110" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../Time/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Time
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_110_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_110">
+            <span class="md-nav__icon md-icon"></span>
+            Time
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Details
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Function Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validate" class="md-nav__link">
+    <span class="md-ellipsis">
+      validate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="datapackutils">DataPackUtils</h1>
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#validate">validate</a></td>
+<td>Checks whether a file is valid as a data pack or not.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="function-details">Function Details</h2>
+<h3 id="validate">validate<a name="validate"></a></h3>
+<div class="admonition function">
+<p class="admonition-title">bool validate(QFileInfo file)</p>
+<p>Checks whether a file is valid as a data pack or not.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://doxide.org" target="_blank" rel="noopener">
+      Doxide
+    </a>
+    and
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/tablesort@5.3.0/src/tablesort.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/tablesort@5.3.0/src/sorts/tablesort.number.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>
